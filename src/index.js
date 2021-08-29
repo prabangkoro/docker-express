@@ -7,6 +7,12 @@ app.get('/', (req, res) => {
     })
 })
 
+app.get('/ping', (req, res) => {
+    res.json({
+        message: 'service alive.'
+    })
+})
+
 app.listen(port, () => {
     console.log(`App is running on port: ${port}`)
 })
